@@ -1,7 +1,9 @@
 package sk.stuba.fei.uim.oop;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Comparator;
+import java.util.Locale;
 
 class Student{
     private int  ID;
@@ -62,7 +64,7 @@ public class Main {
         Student[] poleStudentov = new Student[6];
         Main.create5Students(poleStudentov);
         poleStudentov[5] = sebike;
-        Main.sortStudents(poleStudentov,"descending");
+        Main.sortStudents(poleStudentov,false);
 
 
     }
@@ -82,9 +84,15 @@ public class Main {
 
     }
 
-    public static void sortStudents(Student[] arr, String dirOfSort){
-        Arrays.sort(arr, Comparator.comparing(Student::getName));
-        int a =2;
-    }
+    public static void sortStudents(Student[] arr, boolean descending){
+
+        if (descending){
+            Arrays.sort(arr, Comparator.comparing(Student::getName).reversed());
+            return;
+
+        } else {
+            Arrays.sort(arr, Comparator.comparing(Student::getName));
+        }
 
 }
+    }
