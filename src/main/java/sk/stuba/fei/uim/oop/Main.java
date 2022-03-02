@@ -59,7 +59,6 @@ public class Main {
         Student[] poleStudentov = new Student[6];
         Main.create5Students(poleStudentov);
         poleStudentov[5] = sebike;
-        int a =2;
 
 
     }
