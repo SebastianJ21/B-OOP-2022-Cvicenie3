@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.Locale;
 
-class Student{
+public class Student{
     private int  ID;
     private String name;
     private String surname;

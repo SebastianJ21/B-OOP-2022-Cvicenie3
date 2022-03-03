@@ -1,5 +1,7 @@
 package sk.stuba.fei.uim.oop;
 
+import sk.stuba.fei.uim.oop.utility.KeyboardInput;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
@@ -19,6 +21,11 @@ public class Main {
         Main.create5Students(poleStudentov);
         poleStudentov[5] = sebike;
         Main.sortStudents(poleStudentov,false);
+
+        //Cvicenie
+
+        int vek = KeyboardInput.readInt("Zadajte vek",2 );
+        System.out.println(vek);
 
 
     }
